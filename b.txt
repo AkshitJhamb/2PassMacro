@@ -1,0 +1,29 @@
+    
+  :    
+  
+     
+.MODEL SMALL
+.CODE
+MOV AX,@DATA
+MOV DS,AX
+MOV AL,NUM1
+MOV BL,NUM2
+ADD AL,BL
+ 
+ MOV AH AL 
+ ADD AL BL 
+ INT 21H 
+ 
+ MOV AH AX 
+ INT 21H 
+ 
+
+ MOV AH 02H 
+ MOV BH 00 
+ MOV DH 12 
+ MOV DL 40 
+ INT 10H 
+
+ MOV AH 4CH 
+ INT 21H 
+END
